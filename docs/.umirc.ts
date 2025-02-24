@@ -3,9 +3,6 @@ import { defineConfig } from "umi";
 export default defineConfig({
   title: "ant-theme-builder",
   outputPath: "dist-docs",
-  favicons: [
-    "/favicon.ico",
-  ],
   routes: [
     { path: "/", redirect: "/ant" },
     {
