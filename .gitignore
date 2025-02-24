@@ -1,0 +1,14 @@
+node_modules
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+.DS_Store
+
+docs/dist-docs
+
+
+.env.local
+.umirc.local.ts
+.umi
+.umi-production
+.umi-test

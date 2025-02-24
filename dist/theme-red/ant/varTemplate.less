@@ -1,0 +1,821 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+@import 'antd/lib/style/color/colors';
+
+@theme: variable;
+
+// The prefix to use on all css classes from ant.
+@ant-prefix: ant;
+
+// An override for the html selector for theme prefixes
+@html-selector: html;
+
+@outline-fade: 20%;
+
+
+
+@white: #fff;
+@black: #000;
+
+:root {
+  @component-background: #fff;
+  @body-background: #fff;
+  @popover-background: @component-background;
+
+  @text-color: fade(@black, 85%);
+
+  @item-hover-bg: #f5f5f5;
+
+  @border-color-base: hsv(0, 0, 85%); 
+  @border-color-split: rgba(0, 0, 0, 0.06);
+  
+  @background-color-light: hsv(0, 0, 98%);
+  @background-color-base: hsv(0, 0, 96%);
+
+  @disabled-color: fade(@black, 25%);
+  @disabled-active-bg: tint(@black, 90%);
+
+  @base-primary: @blue-6;
+  @primary-color: @base-primary;
+  @info-color: @primary-color;
+  @success-color: @green-6;
+  @warning-color: @gold-6;
+  @error-color: @red-5;
+
+  @highlight-color: @red-5;
+
+
+  // ========= Primary Color =========
+  --@{ant-prefix}-primary-color: @base-primary;
+  --@{ant-prefix}-primary-color-hover: color(~`colorPalette('@{base-primary}', 5) `);
+  --@{ant-prefix}-primary-color-active: color(~`colorPalette('@{base-primary}', 7) `);
+  --@{ant-prefix}-primary-color-outline: fade(@base-primary, @outline-fade);
+
+  // Legacy
+  @legacy-primary-1: color(~`colorPalette('@{base-primary}', 1) `);
+
+  --@{ant-prefix}-primary-1: @legacy-primary-1;
+  --@{ant-prefix}-primary-2: color(~`colorPalette('@{base-primary}', 2) `);
+  --@{ant-prefix}-primary-3: color(~`colorPalette('@{base-primary}', 3) `);
+  --@{ant-prefix}-primary-4: color(~`colorPalette('@{base-primary}', 4) `);
+  --@{ant-prefix}-primary-5: color(~`colorPalette('@{base-primary}', 5) `);
+  --@{ant-prefix}-primary-6: @base-primary;
+  --@{ant-prefix}-primary-7: color(~`colorPalette('@{base-primary}', 7) `);
+
+  // Deprecated
+  --@{ant-prefix}-primary-color-deprecated-pure: ~'';
+  --@{ant-prefix}-primary-color-deprecated-l-35: lighten(@base-primary, 35%);
+  --@{ant-prefix}-primary-color-deprecated-l-20: lighten(@base-primary, 20%);
+  --@{ant-prefix}-primary-color-deprecated-t-20: tint(@base-primary, 20%);
+  --@{ant-prefix}-primary-color-deprecated-t-50: tint(@base-primary, 50%);
+  --@{ant-prefix}-primary-color-deprecated-f-12: fade(@base-primary, 12%);
+  --@{ant-prefix}-primary-color-active-deprecated-f-30: fade(@legacy-primary-1, 30%);
+  --@{ant-prefix}-primary-color-active-deprecated-d-02: darken(@legacy-primary-1, 2%);
+
+  // ========= Success Color =========
+  --@{ant-prefix}-success-color: @green-6;
+  --@{ant-prefix}-success-color-hover: color(~`colorPalette('@{green-6}', 5) `);
+  --@{ant-prefix}-success-color-active: color(~`colorPalette('@{green-6}', 7) `);
+  --@{ant-prefix}-success-color-outline: fade(@green-6, @outline-fade);
+  --@{ant-prefix}-success-color-deprecated-bg: ~`colorPalette('@{green-6}', 1) `;
+  --@{ant-prefix}-success-color-deprecated-border: ~`colorPalette('@{green-6}', 3) `;
+
+  // ========== Error Color ==========
+  --@{ant-prefix}-error-color: @red-5;
+  --@{ant-prefix}-error-color-hover: color(~`colorPalette('@{red-5}', 5) `);
+  --@{ant-prefix}-error-color-active: color(~`colorPalette('@{red-5}', 7) `);
+  --@{ant-prefix}-error-color-outline: fade(@red-5, @outline-fade);
+  --@{ant-prefix}-error-color-deprecated-bg: ~`colorPalette('@{red-5}', 1) `;
+  --@{ant-prefix}-error-color-deprecated-border: ~`colorPalette('@{red-5}', 3) `;
+
+  // ========= Warning Color =========
+  --@{ant-prefix}-warning-color: @gold-6;
+  --@{ant-prefix}-warning-color-hover: color(~`colorPalette('@{gold-6}', 5) `);
+  --@{ant-prefix}-warning-color-active: color(~`colorPalette('@{gold-6}', 7) `);
+  --@{ant-prefix}-warning-color-outline: fade(@gold-6, @outline-fade);
+  --@{ant-prefix}-warning-color-deprecated-bg: ~`colorPalette('@{gold-6}', 1) `;
+  --@{ant-prefix}-warning-color-deprecated-border: ~`colorPalette('@{gold-6}', 3) `;
+
+  // ========== Info Color ===========
+  --@{ant-prefix}-info-color: @info-color;
+  --@{ant-prefix}-info-color-deprecated-bg: ~`colorPalette('@{info-color}', 1) `;
+  --@{ant-prefix}-info-color-deprecated-border: ~`colorPalette('@{info-color}', 3) `;
+
+  // ========= Color used by default to control hover and active backgrounds and for =========
+  --@{ant-prefix}-primary-1: color(~`colorPalette('@{base-primary}', 1) `); // replace tint(@primary-color, 90%)
+  --@{ant-prefix}-primary-2: color(~`colorPalette('@{base-primary}', 2) `); // replace tint(@primary-color, 80%)
+  --@{ant-prefix}-primary-3: color(~`colorPalette('@{base-primary}', 3) `); // unused
+  --@{ant-prefix}-primary-4: color(~`colorPalette('@{base-primary}', 4) `); // unused
+  --@{ant-prefix}-primary-5: color(~`colorPalette('@{base-primary}', 5) `); // color used to control the text color in many active and hover states, replace tint(@primary-color, 20%)
+  --@{ant-prefix}-primary-6: @base-primary; // color used to control the text color of active buttons, don't use, use @primary-color
+  --@{ant-prefix}-primary-7: color(~`colorPalette('@{base-primary}', 7) `); // replace shade(@primary-color, 5%)
+  --@{ant-prefix}-primary-8: color(~`colorPalette('@{base-primary}', 8) `); // unused
+  --@{ant-prefix}-primary-9: color(~`colorPalette('@{base-primary}', 9) `); // unused
+  --@{ant-prefix}-primary-10: color(~`colorPalette('@{base-primary}', 10) `); // unused
+  // 高亮色
+  --@{ant-prefix}-highlight-color: @highlight-color;
+  // 区别
+  --@{ant-prefix}-popover-background: @popover-background;
+  --@{ant-prefix}-popover-customize-border-color: rgba(0, 0, 0, 0.06);
+  --@{ant-prefix}-body-background: @body-background;
+  --@{ant-prefix}-component-backgroud: @body-background;
+
+  // 文字颜色
+  --@{ant-prefix}-text-color: @text-color;
+  --@{ant-prefix}-text-color-secondary: fade(@black, 45%);
+  --@{ant-prefix}-text-color-inverse: @white;
+
+  --@{ant-prefix}-icon-color: inherit;
+  --@{ant-prefix}-icon-color-hover: fade(@black, 75%);
+  --@{ant-prefix}-heading-color: fade(@black, 85%);
+
+  
+
+  // The background colors for active and hover states for things like
+  // list items or table cells.
+  
+  --@{ant-prefix}-item-hover-bg: @item-hover-bg;
+
+  --@{ant-prefix}-border-color-base: @border-color-base; // base border outline a component
+  --@{ant-prefix}-border-color-split: @border-color-split; // split border inside a component
+
+  --@{ant-prefix}-background-color-light: @background-color-light; // background of header and selected item
+  --@{ant-prefix}-background-color-base: @background-color-base; // Default grey background color
+
+  // Disabled states
+  --@{ant-prefix}-disabled-color: @disabled-color;
+  --@{ant-prefix}-disabled-bg: ~'var(--@{ant-prefix}-primary-color-hover)';
+  --@{ant-prefix}-disabled-active-bg: @disabled-active-bg;
+  --@{ant-prefix}-disabled-color-dark: fade(@white, 35%);
+   // Tree
+  // ---
+  --@{ant-prefix}-tree-bg: @component-background;
+  // List
+  // ---
+  --@{ant-prefix}-list-customize-card-bg: @component-background;
+
+  // Shadow
+  // ---
+  --@{ant-prefix}-shadow-color: rgba(0, 0, 0, 0.15);
+  --@{ant-prefix}-shadow-color-inverse: @component-background;
+  --@{ant-prefix}-shadow-1-up: 0 -6px 16px -8px rgba(0, 0, 0, 0.08), 0 -9px 28px 0 rgba(0, 0, 0, 0.05),
+    0 -12px 48px 16px rgba(0, 0, 0, 0.03);
+  --@{ant-prefix}-shadow-1-down: 0 6px 16px -8px rgba(0, 0, 0, 0.08), 0 9px 28px 0 rgba(0, 0, 0, 0.05),
+    0 12px 48px 16px rgba(0, 0, 0, 0.03);
+  --@{ant-prefix}-shadow-1-right: 6px 0 16px -8px rgba(0, 0, 0, 0.08), 9px 0 28px 0 rgba(0, 0, 0, 0.05),
+    12px 0 48px 16px rgba(0, 0, 0, 0.03);
+  --@{ant-prefix}-shadow-2: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+  // Buttons
+  --@{ant-prefix}-btn-default-bg: @component-background;
+
+  --@{ant-prefix}-btn-default-ghost-color: @component-background;
+  --@{ant-prefix}-btn-default-ghost-border: @component-background;
+
+  --@{ant-prefix}-btn-text-hover-bg: rgba(0, 0, 0, 0.018);
+
+  // Checkbox
+  --@{ant-prefix}-checkbox-check-bg: @white;
+
+  // Descriptions
+  --@{ant-prefix}-descriptions-bg: #fafafa;
+
+  // Divider
+  --@{ant-prefix}-divider-color: rgba(0, 0, 0, 6%);
+  // Modal
+  --@{ant-prefix}-modal-header-bg: @component-background;
+  --@{ant-prefix}-modal-content-bg: @component-background;
+  // Radio
+  --@{ant-prefix}-radio-solid-checked-color: @component-background;
+  --@{ant-prefix}-radio-dot-disabled-color: fade(@black, 20%);
+
+  // Radio buttons
+  --@{ant-prefix}-radio-disabled-button-checked-bg: ~'var(--@{ant-prefix}-disabled-active-bg)';
+
+  // Layout
+  --@{ant-prefix}-layout-body-background: #f0f2f5;
+  --@{ant-prefix}-layout-header-background: #001529;
+  --@{ant-prefix}-layout-trigger-background: #002140;
+
+  // Input
+  --@{ant-prefix}-input-bg: @component-background;
+  --@{ant-prefix}-input-placeholder-color: hsv(0, 0, 75%);
+  --@{ant-prefix}-input-icon-color: ~'var(--@{ant-prefix}-text-color)';
+  --@{ant-prefix}-input-number-handler-active-bg: #f4f4f4;
+  --@{ant-prefix}-input-icon-hover-color: fade(@black, 85%);
+
+
+  // Select
+  --@{ant-prefix}-select-dropdown-bg: @component-background;
+  --@{ant-prefix}-select-background: @component-background;
+  --@{ant-prefix}-select-clear-background: ~'var(--@{ant-prefix}-select-background)';
+  --@{ant-prefix}-select-selection-item-bg: ~'var(--@{ant-prefix}-background-color-base)';
+  --@{ant-prefix}-select-selection-item-border-color: ~'var(--@{ant-prefix}-border-color-split)';
+  --@{ant-prefix}-select-multiple-disabled-background: ~'var(--@{ant-prefix}-disabled-bg)';
+  --@{ant-prefix}-select-multiple-item-disabled-color: #bfbfbf;
+  --@{ant-prefix}-select-multiple-item-disabled-border-color: ~'var(--@{ant-prefix}-border-color-base)';
+
+  // Cascader
+  --@{ant-prefix}-cascader-bg: @component-background;
+  --@{ant-prefix}-cascader-menu-bg: @component-background;
+
+  // Tooltip
+  // Tooltip background color
+  --@{ant-prefix}-tooltip-bg: rgba(0, 0, 0, 0.75);
+
+  // Menu
+  --@{ant-prefix}-menu-popup-bg: @component-background;
+  // dark theme
+  --@{ant-prefix}-menu-dark-bg: ~'var(--@{ant-prefix}-layout-header-background)';
+  --@{ant-prefix}-menu-dark-inline-submenu-bg: #000c17;
+
+  // Message
+  --@{ant-prefix}-message-notice-content-bg: @component-background;
+
+  // Notification
+  --@{ant-prefix}-notification-bg: @component-background;
+
+
+  // LINK
+  --@{ant-prefix}-link-hover-color: ~'var(--@{ant-prefix}-primary-color-hover)';
+  --@{ant-prefix}-link-active-color: ~'var(--@{ant-prefix}-primary-color-active)';
+
+  // Table
+  --@{ant-prefix}-table-header-bg: ~'var(--@{ant-prefix}-background-color-light)';
+  --@{ant-prefix}-table-body-sort-bg: #fafafa;
+  --@{ant-prefix}-table-row-hover-bg: ~'var(--@{ant-prefix}-background-color-light)';
+  --@{ant-prefix}-table-header-cell-split-color: rgba(0, 0, 0, 0.06);
+  --@{ant-prefix}-table-header-sort-bg: ~'var(--@{ant-prefix}-background-color-base)';
+  --@{ant-prefix}-table-header-filter-active-bg: rgba(0, 0, 0, 0.04);
+  --@{ant-prefix}-table-header-sort-active-bg: rgba(0, 0, 0, 0.04);
+  --@{ant-prefix}-table-fixed-header-sort-active-bg: hsv(0, 0, 96%);
+  --@{ant-prefix}-table-filter-btns-bg: inherit;
+  --@{ant-prefix}-table-expanded-row-bg: ~'var(--@{ant-prefix}-table-header-bg)';
+  --@{ant-prefix}-table-filter-dropdown-bg: @component-background;
+  --@{ant-prefix}-table-expand-icon-bg: @component-background;
+
+  // TimePicker
+  // ---
+  --@{ant-prefix}-picker-bg: @component-background;
+  --@{ant-prefix}-picker-basic-cell-hover-with-range-color:: ~'var(--@{ant-prefix}-primary-color-deprecated-l-35)';
+  --@{ant-prefix}-picker-basic-cell-disabled-bg: rgba(0, 0, 0, 0.04);
+  --@{ant-prefix}-picker-date-hover-range-border-color: ~'var(--@{ant-prefix}-primary-color-deprecated-l-20)';
+  // Dropdown
+  --@{ant-prefix}-dropdown-menu-bg: @component-background;
+  --@{ant-prefix}-dropdown-menu-submenu-disabled-bg: @component-background;
+  // Steps
+  --@{ant-prefix}-steps-nav-arrow-color: fade(@black, 25%);
+  --@{ant-prefix}-steps-background: @component-background;
+
+  // Avatar
+  --@{ant-prefix}-avatar-bg: #ccc;
+
+  // Progress
+  --@{ant-prefix}-progress-steps-item-bg: #f3f3f3;
+
+  // Calendar
+  --@{ant-prefix}-calendar-bg: @component-background;
+  --@{ant-prefix}-calendar-input-bg: @component-background;
+  --@{ant-prefix}-calendar-border-color: @white;
+  --@{ant-prefix}-calendar-full-bg: @component-background;
+  // Badge
+  --@{ant-prefix}-badge-text-color: @component-background;
+  // Popover
+  // Popover body background color
+  --@{ant-prefix}-popover-bg: @component-background;
+  // Drawer
+  --@{ant-prefix}-drawer-bg: @component-background;
+
+  // Card
+  --@{ant-prefix}-card-actions-background: @component-background;
+  --@{ant-prefix}-card-skeleton-bg: #cfd8dc;
+  --@{ant-prefix}-card-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12),
+  0 5px 12px 4px rgba(0, 0, 0, 0.09);
+
+  // Transfer
+  --@{ant-prefix}-transfer-item-hover-bg: @item-hover-bg;
+
+  // Comment
+  --@{ant-prefix}-comment-bg: inherit;
+  --@{ant-prefix}-comment-author-time-color: #ccc;
+  --@{ant-prefix}-comment-action-hover-color: #595959;
+
+  // Rate
+  --@{ant-prefix}-rate-star-bg: @border-color-split;
+
+  // Switch
+  --@{ant-prefix}-switch-bg: @component-background;
+
+  // Pagination
+  --@{ant-prefix}-pagination-item-bg: @component-background;
+  --@{ant-prefix}-pagination-item-bg-active: @component-background;
+  --@{ant-prefix}-pagination-item-link-bg: @component-background;
+  --@{ant-prefix}-pagination-item-disabled-color-active: @disabled-color;
+  --@{ant-prefix}-pagination-item-disabled-bg-active: @disabled-active-bg;
+  --@{ant-prefix}-pagination-item-input-bg: @component-background;
+
+  // PageHeader
+  --@{ant-prefix}-page-header-back-color: #000;
+  --@{ant-prefix}-page-header-ghost-bg: inherit;
+
+  // Slider
+  --@{ant-prefix}-slider-rail-background-color: @background-color-base;
+  --@{ant-prefix}-slider-rail-background-color-hover: #e1e1e1;
+  --@{ant-prefix}-slider-dot-border-color: @border-color-split;
+  --@{ant-prefix}-slider-dot-border-color-active: ~'var(--@{ant-prefix}-primary-color-deprecated-t-50)';
+
+  // Skeleton
+  --@{ant-prefix}-skeleton-color: rgba(190, 190, 190, 0.2);
+  --@{ant-prefix}-skeleton-to-color: shade(rgba(190, 190, 190, 0.2), 5%);
+
+  // Alert
+  --@{ant-prefix}-alert-success-border-color: ~'var(--@{ant-prefix}-success-color-deprecated-border)';
+  --@{ant-prefix}-alert-success-bg-color: ~'var(--@{ant-prefix}-success-color-deprecated-bg)';
+  --@{ant-prefix}-alert-success-icon-color: @success-color;
+
+  --@{ant-prefix}-alert-info-border-color: ~'var(--@{ant-prefix}-info-color-deprecated-border)';
+  --@{ant-prefix}-alert-info-bg-color: ~'var(--@{ant-prefix}-info-color-deprecated-bg)';
+  --@{ant-prefix}-alert-info-icon-color: @info-color;
+
+  --@{ant-prefix}-alert-warning-border-color: ~'var(--@{ant-prefix}-warning-color-deprecated-border)';
+  --@{ant-prefix}-alert-warning-bg-color: ~'var(--@{ant-prefix}-warning-color-deprecated-bg)';
+  --@{ant-prefix}-alert-warning-icon-color: @warning-color;
+
+  --@{ant-prefix}-alert-error-border-color: ~'var(--@{ant-prefix}-error-color-deprecated-border)';
+  --@{ant-prefix}-alert-error-bg-color: ~'var(--@{ant-prefix}-error-color-deprecated-bg)';
+  --@{ant-prefix}-alert-error-icon-color: @error-color;
+
+  // Timeline
+  --@{ant-prefix}-timeline-color: @border-color-split;
+  --@{ant-prefix}-timeline-dot-color: @primary-color;
+
+  // Mentions
+  --@{ant-prefix}-mentions-dropdown-bg: @component-background;
+
+  // Segmented
+  --@{ant-prefix}-segmented-bg: fade(@black, 4%);
+  --@{ant-prefix}-segmented-hover-bg: fade(@black, 6%);
+  --@{ant-prefix}-segmented-selected-bg: @white;
+  --@{ant-prefix}-segmented-label-color: fade(@black, 65%);
+  --@{ant-prefix}-segmented-label-hover-color: #262626;
+}
+
+.dark {
+  @component-background: #141414;
+  @popover-background: #1f1f1f;
+  @icon-color: inherit;
+
+  @text-color: fade(@white, 85%);
+  @border-color-base: #434343; // base border outline a component
+  @border-color-split: #303030; // split border inside a component
+  
+  @background-color-light: fade(@white, 4%); // background of header and selected item
+  @background-color-base: fade(@white, 8%); // Default grey background color
+  
+  @body-background: @black;
+  @base-primary: mix(@blue-base, @component-background, 85%);
+
+  // color palettes
+  @blue-1: mix(color(~`colorPalette('@{blue-base}', 8) `), @component-background, 15%);
+  @blue-2: mix(color(~`colorPalette('@{blue-base}', 7) `), @component-background, 25%);
+  @blue-3: mix(@blue-base, @component-background, 30%);
+  @blue-4: mix(@blue-base, @component-background, 45%);
+  @blue-5: mix(@blue-base, @component-background, 65%);
+  @blue-6: mix(@blue-base, @component-background, 85%);
+  @blue-7: mix(color(~`colorPalette('@{blue-base}', 5) `), @component-background, 90%);
+  @blue-8: mix(color(~`colorPalette('@{blue-base}', 4) `), @component-background, 95%);
+  @blue-9: mix(color(~`colorPalette('@{blue-base}', 3) `), @component-background, 97%);
+  @blue-10: mix(color(~`colorPalette('@{blue-base}', 2) `), @component-background, 98%);
+
+  @purple-1: mix(color(~`colorPalette('@{purple-base}', 8) `), @component-background, 15%);
+  @purple-2: mix(color(~`colorPalette('@{purple-base}', 7) `), @component-background, 25%);
+  @purple-3: mix(@purple-base, @component-background, 30%);
+  @purple-4: mix(@purple-base, @component-background, 45%);
+  @purple-5: mix(@purple-base, @component-background, 65%);
+  @purple-6: mix(@purple-base, @component-background, 85%);
+  @purple-7: mix(color(~`colorPalette('@{purple-base}', 5) `), @component-background, 90%);
+  @purple-8: mix(color(~`colorPalette('@{purple-base}', 4) `), @component-background, 95%);
+  @purple-9: mix(color(~`colorPalette('@{purple-base}', 3) `), @component-background, 97%);
+  @purple-10: mix(color(~`colorPalette('@{purple-base}', 2) `), @component-background, 98%);
+
+  @cyan-1: mix(color(~`colorPalette('@{cyan-base}', 8) `), @component-background, 15%);
+  @cyan-2: mix(color(~`colorPalette('@{cyan-base}', 7) `), @component-background, 25%);
+  @cyan-3: mix(@cyan-base, @component-background, 30%);
+  @cyan-4: mix(@cyan-base, @component-background, 45%);
+  @cyan-5: mix(@cyan-base, @component-background, 65%);
+  @cyan-6: mix(@cyan-base, @component-background, 85%);
+  @cyan-7: mix(color(~`colorPalette('@{cyan-base}', 5) `), @component-background, 90%);
+  @cyan-8: mix(color(~`colorPalette('@{cyan-base}', 4) `), @component-background, 95%);
+  @cyan-9: mix(color(~`colorPalette('@{cyan-base}', 3) `), @component-background, 97%);
+  @cyan-10: mix(color(~`colorPalette('@{cyan-base}', 2) `), @component-background, 98%);
+
+  @green-1: mix(color(~`colorPalette('@{green-base}', 8) `), @component-background, 15%);
+  @green-2: mix(color(~`colorPalette('@{green-base}', 7) `), @component-background, 25%);
+  @green-3: mix(@green-base, @component-background, 30%);
+  @green-4: mix(@green-base, @component-background, 45%);
+  @green-5: mix(@green-base, @component-background, 65%);
+  @green-6: mix(@green-base, @component-background, 85%);
+  @green-7: mix(color(~`colorPalette('@{green-base}', 5) `), @component-background, 90%);
+  @green-8: mix(color(~`colorPalette('@{green-base}', 4) `), @component-background, 95%);
+  @green-9: mix(color(~`colorPalette('@{green-base}', 3) `), @component-background, 97%);
+  @green-10: mix(color(~`colorPalette('@{green-base}', 2) `), @component-background, 98%);
+
+  @magenta-1: mix(color(~`colorPalette('@{magenta-base}', 8) `), @component-background, 15%);
+  @magenta-2: mix(color(~`colorPalette('@{magenta-base}', 7) `), @component-background, 25%);
+  @magenta-3: mix(@magenta-base, @component-background, 30%);
+  @magenta-4: mix(@magenta-base, @component-background, 45%);
+  @magenta-5: mix(@magenta-base, @component-background, 65%);
+  @magenta-6: mix(@magenta-base, @component-background, 85%);
+  @magenta-7: mix(color(~`colorPalette('@{magenta-base}', 5) `), @component-background, 90%);
+  @magenta-8: mix(color(~`colorPalette('@{magenta-base}', 4) `), @component-background, 95%);
+  @magenta-9: mix(color(~`colorPalette('@{magenta-base}', 3) `), @component-background, 97%);
+  @magenta-10: mix(color(~`colorPalette('@{magenta-base}', 2) `), @component-background, 98%);
+
+  @pink-1: mix(color(~`colorPalette('@{pink-base}', 8) `), @component-background, 15%);
+  @pink-2: mix(color(~`colorPalette('@{pink-base}', 7) `), @component-background, 25%);
+  @pink-3: mix(@pink-base, @component-background, 30%);
+  @pink-4: mix(@pink-base, @component-background, 45%);
+  @pink-5: mix(@pink-base, @component-background, 65%);
+  @pink-6: mix(@pink-base, @component-background, 85%);
+  @pink-7: mix(color(~`colorPalette('@{pink-base}', 5) `), @component-background, 90%);
+  @pink-8: mix(color(~`colorPalette('@{pink-base}', 4) `), @component-background, 95%);
+  @pink-9: mix(color(~`colorPalette('@{pink-base}', 3) `), @component-background, 97%);
+  @pink-10: mix(color(~`colorPalette('@{pink-base}', 2) `), @component-background, 98%);
+
+  @red-1: mix(color(~`colorPalette('@{red-base}', 8) `), @component-background, 15%);
+  @red-2: mix(color(~`colorPalette('@{red-base}', 7) `), @component-background, 25%);
+  @red-3: mix(@red-base, @component-background, 30%);
+  @red-4: mix(@red-base, @component-background, 45%);
+  @red-5: mix(@red-base, @component-background, 65%);
+  @red-6: mix(@red-base, @component-background, 85%);
+  @red-7: mix(color(~`colorPalette('@{red-base}', 5) `), @component-background, 90%);
+  @red-8: mix(color(~`colorPalette('@{red-base}', 4) `), @component-background, 95%);
+  @red-9: mix(color(~`colorPalette('@{red-base}', 3) `), @component-background, 97%);
+  @red-10: mix(color(~`colorPalette('@{red-base}', 2) `), @component-background, 98%);
+
+  @orange-1: mix(color(~`colorPalette('@{orange-base}', 8) `), @component-background, 15%);
+  @orange-2: mix(color(~`colorPalette('@{orange-base}', 7) `), @component-background, 25%);
+  @orange-3: mix(@orange-base, @component-background, 30%);
+  @orange-4: mix(@orange-base, @component-background, 45%);
+  @orange-5: mix(@orange-base, @component-background, 65%);
+  @orange-6: mix(@orange-base, @component-background, 85%);
+  @orange-7: mix(color(~`colorPalette('@{orange-base}', 5) `), @component-background, 90%);
+  @orange-8: mix(color(~`colorPalette('@{orange-base}', 4) `), @component-background, 95%);
+  @orange-9: mix(color(~`colorPalette('@{orange-base}', 3) `), @component-background, 97%);
+  @orange-10: mix(color(~`colorPalette('@{orange-base}', 2) `), @component-background, 98%);
+
+  @yellow-1: mix(color(~`colorPalette('@{yellow-base}', 8) `), @component-background, 15%);
+  @yellow-2: mix(color(~`colorPalette('@{yellow-base}', 7) `), @component-background, 25%);
+  @yellow-3: mix(@yellow-base, @component-background, 30%);
+  @yellow-4: mix(@yellow-base, @component-background, 45%);
+  @yellow-5: mix(@yellow-base, @component-background, 65%);
+  @yellow-6: mix(@yellow-base, @component-background, 85%);
+  @yellow-7: mix(color(~`colorPalette('@{yellow-base}', 5) `), @component-background, 90%);
+  @yellow-8: mix(color(~`colorPalette('@{yellow-base}', 4) `), @component-background, 95%);
+  @yellow-9: mix(color(~`colorPalette('@{yellow-base}', 3) `), @component-background, 97%);
+  @yellow-10: mix(color(~`colorPalette('@{yellow-base}', 2) `), @component-background, 98%);
+
+  @volcano-1: mix(color(~`colorPalette('@{volcano-base}', 8) `), @component-background, 15%);
+  @volcano-2: mix(color(~`colorPalette('@{volcano-base}', 7) `), @component-background, 25%);
+  @volcano-3: mix(@volcano-base, @component-background, 30%);
+  @volcano-4: mix(@volcano-base, @component-background, 45%);
+  @volcano-5: mix(@volcano-base, @component-background, 65%);
+  @volcano-6: mix(@volcano-base, @component-background, 85%);
+  @volcano-7: mix(color(~`colorPalette('@{volcano-base}', 5) `), @component-background, 90%);
+  @volcano-8: mix(color(~`colorPalette('@{volcano-base}', 4) `), @component-background, 95%);
+  @volcano-9: mix(color(~`colorPalette('@{volcano-base}', 3) `), @component-background, 97%);
+  @volcano-10: mix(color(~`colorPalette('@{volcano-base}', 2) `), @component-background, 98%);
+
+  @geekblue-1: mix(color(~`colorPalette('@{geekblue-base}', 8) `), @component-background, 15%);
+  @geekblue-2: mix(color(~`colorPalette('@{geekblue-base}', 7) `), @component-background, 25%);
+  @geekblue-3: mix(@geekblue-base, @component-background, 30%);
+  @geekblue-4: mix(@geekblue-base, @component-background, 45%);
+  @geekblue-5: mix(@geekblue-base, @component-background, 65%);
+  @geekblue-6: mix(@geekblue-base, @component-background, 85%);
+  @geekblue-7: mix(color(~`colorPalette('@{geekblue-base}', 5) `), @component-background, 90%);
+  @geekblue-8: mix(color(~`colorPalette('@{geekblue-base}', 4) `), @component-background, 95%);
+  @geekblue-9: mix(color(~`colorPalette('@{geekblue-base}', 3) `), @component-background, 97%);
+  @geekblue-10: mix(color(~`colorPalette('@{geekblue-base}', 2) `), @component-background, 98%);
+
+  @lime-1: mix(color(~`colorPalette('@{lime-base}', 8) `), @component-background, 15%);
+  @lime-2: mix(color(~`colorPalette('@{lime-base}', 7) `), @component-background, 25%);
+  @lime-3: mix(@lime-base, @component-background, 30%);
+  @lime-4: mix(@lime-base, @component-background, 45%);
+  @lime-5: mix(@lime-base, @component-background, 65%);
+  @lime-6: mix(@lime-base, @component-background, 85%);
+  @lime-7: mix(color(~`colorPalette('@{lime-base}', 5) `), @component-background, 90%);
+  @lime-8: mix(color(~`colorPalette('@{lime-base}', 4) `), @component-background, 95%);
+  @lime-9: mix(color(~`colorPalette('@{lime-base}', 3) `), @component-background, 97%);
+  @lime-10: mix(color(~`colorPalette('@{lime-base}', 2) `), @component-background, 98%);
+
+  @gold-1: mix(color(~`colorPalette('@{gold-base}', 8) `), @component-background, 15%);
+  @gold-2: mix(color(~`colorPalette('@{gold-base}', 7) `), @component-background, 25%);
+  @gold-3: mix(@gold-base, @component-background, 30%);
+  @gold-4: mix(@gold-base, @component-background, 45%);
+  @gold-5: mix(@gold-base, @component-background, 65%);
+  @gold-6: mix(@gold-base, @component-background, 85%);
+  @gold-7: mix(color(~`colorPalette('@{gold-base}', 5) `), @component-background, 90%);
+  @gold-8: mix(color(~`colorPalette('@{gold-base}', 4) `), @component-background, 95%);
+  @gold-9: mix(color(~`colorPalette('@{gold-base}', 3) `), @component-background, 97%);
+  @gold-10: mix(color(~`colorPalette('@{gold-base}', 2) `), @component-background, 98%);
+
+  --@{ant-prefix}-black: @white;
+  --@{ant-prefix}-white: @black;
+
+  @primary-color: @base-primary;
+  @info-color: @primary-color;
+  @success-color: @green-6;
+  @warning-color: @gold-6;
+  @error-color: @red-5;
+
+  // ========= Primary Color =========
+  --@{ant-prefix}-primary-color: @primary-color;
+  --@{ant-prefix}-primary-color-hover: color(~`colorPalette('@{primary-color}', 5) `);
+  --@{ant-prefix}-primary-color-active: color(~`colorPalette('@{primary-color}', 7) `);
+  --@{ant-prefix}-primary-color-outline: fade(@primary-color, @outline-fade);
+
+  // ========== Info Color ===========
+  --@{ant-prefix}-info-color: @primary-color;
+  --@{ant-prefix}-info-color-deprecated-bg: ~`colorPalette('@{info-color}', 1) `;
+  --@{ant-prefix}-info-color-deprecated-border: ~`colorPalette('@{info-color}', 3) `;
+
+  // ========= Success Color =========
+  --@{ant-prefix}-success-color: @success-color;
+  --@{ant-prefix}-success-color-hover: color(~`colorPalette('@{success-color}', 5) `);
+  --@{ant-prefix}-success-color-active: color(~`colorPalette('@{success-color}', 7) `);
+  --@{ant-prefix}-success-color-outline: fade(@success-color, @outline-fade);
+  --@{ant-prefix}-success-color-deprecated-bg: ~`colorPalette('@{success-color}', 1) `;
+  --@{ant-prefix}-success-color-deprecated-border: ~`colorPalette('@{success-color}', 3) `;
+
+  // ========== Error Color ==========
+  --@{ant-prefix}-error-color: @error-color;
+  --@{ant-prefix}-error-color-hover: color(~`colorPalette('@{error-color}', 5) `);
+  --@{ant-prefix}-error-color-active: color(~`colorPalette('@{error-color}', 7) `);
+  --@{ant-prefix}-error-color-outline: fade(@error-color, @outline-fade);
+  --@{ant-prefix}-error-color-deprecated-bg: ~`colorPalette('@{error-color}', 1) `;
+  --@{ant-prefix}-error-color-deprecated-border: ~`colorPalette('@{error-color}', 3) `;
+
+  // ========= Warning Color =========
+  --@{ant-prefix}-warning-color: @warning-color;
+  --@{ant-prefix}-warning-color-hover: color(~`colorPalette('@{warning-color}', 5) `);
+  --@{ant-prefix}-warning-color-active: color(~`colorPalette('@{warning-color}', 7) `);
+  --@{ant-prefix}-warning-color-outline: fade(@warning-color, @outline-fade);
+  --@{ant-prefix}-warning-color-deprecated-bg: ~`colorPalette('@{warning-color}', 1) `;
+  --@{ant-prefix}-warning-color-deprecated-border: ~`colorPalette('@{warning-color}', 3) `;
+
+  
+
+  // Color used by default to control hover and active backgrounds and for
+  // alert info backgrounds.
+  --@{ant-prefix}-primary-1: mix(color(~`colorPalette('@{primary-color}', 8) `), @component-background, 15%);
+  --@{ant-prefix}-primary-2: mix(color(~`colorPalette('@{primary-color}', 7) `), @component-background, 25%);
+  --@{ant-prefix}-primary-3: mix(@primary-color, @component-background, 30%);
+  --@{ant-prefix}-primary-4: mix(@primary-color, @component-background, 45%);
+  --@{ant-prefix}-primary-5: mix(@primary-color, @component-background, 65%);
+  --@{ant-prefix}-primary-6: @primary-color;
+  --@{ant-prefix}-primary-7: mix(color(~`colorPalette('@{primary-color}', 5) `), @component-background, 90%);
+  --@{ant-prefix}-primary-8: mix(color(~`colorPalette('@{primary-color}', 4) `), @component-background, 95%);
+  --@{ant-prefix}-primary-9: mix(color(~`colorPalette('@{primary-color}', 3) `), @component-background, 97%);
+  --@{ant-prefix}-primary-10: mix(color(~`colorPalette('@{primary-color}', 2) `), @component-background, 98%);
+  
+  --@{ant-prefix}-popover-background: @popover-background;
+  --@{ant-prefix}-popover-customize-border-color: #3a3a3a;
+  --@{ant-prefix}-body-background: @body-background;
+  --@{ant-prefix}-component-backgroud: @body-background;
+
+  --@{ant-prefix}-text-color: @text-color;
+  --@{ant-prefix}-text-color-secondary: fade(@white, 45%);
+  --@{ant-prefix}-text-color-inverse: @white;
+
+  --@{ant-prefix}-icon-color-hover: fade(@white, 75%);
+  --@{ant-prefix}-heading-color: fade(@white, 85%);
+
+  --@{ant-prefix}-item-hover-bg: fade(@white, 8%);
+
+  // Border color
+  --@{ant-prefix}-border-color-base: @border-color-base; // base border outline a component
+  --@{ant-prefix}-border-color-split: @border-color-split; // split border inside a component
+  
+  --@{ant-prefix}-background-color-light: @background-color-light; // background of header and selected item
+  --@{ant-prefix}-background-color-base: @background-color-base; // Default grey background color
+
+  // Disabled states
+  --@{ant-prefix}-disabled-color: fade(@white, 30%);
+  --@{ant-prefix}-disabled-bg: ~'var(--@{ant-prefix}-primary-color-hover)';
+  --@{ant-prefix}-disabled-color-dark: fade(@white, 30%);
+
+  // Tree
+  // ---
+  --@{ant-prefix}-tree-bg: transparent;
+  // List
+ // ---
+ --@{ant-prefix}-list-customize-card-bg: transparent;
+
+ --@{ant-prefix}-shadow-color: rgba(0, 0, 0, 0.45);
+ --@{ant-prefix}-shadow-color-inverse: @component-background;
+ --@{ant-prefix}-shadow-1-up: 0 -6px 16px -8px rgba(0, 0, 0, 0.32), 0 -9px 28px 0 rgba(0, 0, 0, 0.2),
+    0 -12px 48px 16px rgba(0, 0, 0, 0.12);
+ --@{ant-prefix}-shadow-1-down: 0 6px 16px -8px rgba(0, 0, 0, 0.32), 0 9px 28px 0 rgba(0, 0, 0, 0.2),
+    0 12px 48px 16px rgba(0, 0, 0, 0.12);
+ --@{ant-prefix}-shadow-1-right: 6px 0 16px -8px rgba(0, 0, 0, 0.32), 9px 0 28px 0 rgba(0, 0, 0, 0.2),
+    12px 0 48px 16px rgba(0, 0, 0, 0.12);
+ --@{ant-prefix}-shadow-2: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32),
+    0 9px 28px 8px rgba(0, 0, 0, 0.2);
+
+  // Buttons
+  --@{ant-prefix}-btn-default-bg: transparent;
+
+  --@{ant-prefix}-btn-default-ghost-color: ~'var(--@{ant-prefix}-text-color)';
+  --@{ant-prefix}-btn-default-ghost-border: fade(@white, 25%);
+
+  --@{ant-prefix}-btn-text-hover-bg: rgba(255, 255, 255, 0.03);
+
+  // Checkbox
+  --@{ant-prefix}-checkbox-check-bg: transparent;
+
+  // Descriptions
+  --@{ant-prefix}-descriptions-bg: ~'var(--@{ant-prefix}-background-color-light)';
+
+  // Divider
+  --@{ant-prefix}-divider-color: rgba(255, 255, 255, 12%);
+
+  // Modal
+  --@{ant-prefix}-modal-header-bg: @popover-background;
+  --@{ant-prefix}-modal-content-bg: @popover-background;
+
+  // Radio
+  --@{ant-prefix}-radio-dot-disabled-color: fade(@white, 20%);
+  --@{ant-prefix}-radio-solid-checked-color: @white;
+
+  // Radio buttons
+  --@{ant-prefix}-radio-disabled-button-checked-bg: fade(@white, 20%);
+
+  // Layout
+  --@{ant-prefix}-layout-body-background: @body-background;
+  --@{ant-prefix}-layout-header-background: @popover-background;
+  --@{ant-prefix}-layout-trigger-background: #262626;
+
+  // Input
+  --@{ant-prefix}-input-bg: transparent;
+  --@{ant-prefix}-input-placeholder-color: fade(@white, 30%);
+  --@{ant-prefix}-input-icon-color: fade(@white, 30%);
+  --@{ant-prefix}-input-number-handler-active-bg: ~'var(--@{ant-prefix}-item-hover-bg)';
+  --@{ant-prefix}-input-icon-hover-color: fade(@white, 85%);
+
+  // Select
+  --@{ant-prefix}-select-background: transparent;
+  --@{ant-prefix}-select-dropdown-bg: @popover-background;
+  --@{ant-prefix}-select-clear-background: @component-background;
+  --@{ant-prefix}-select-selection-item-bg: fade(@white, 8);
+  --@{ant-prefix}-select-selection-item-border-color: @border-color-split;
+  --@{ant-prefix}-select-multiple-disabled-background: @component-background;
+  --@{ant-prefix}-select-multiple-item-disabled-color: #595959;
+  --@{ant-prefix}-select-multiple-item-disabled-border-color: @popover-background;
+
+  // Cascader
+  --@{ant-prefix}-cascader-bg: transparent;
+  --@{ant-prefix}-cascader-menu-bg: @popover-background;
+
+  // Tooltip
+  --@{ant-prefix}-tooltip-bg: #434343;
+
+  // Menu
+  // dark theme
+  --@{ant-prefix}-menu-dark-inline-submenu-bg: @component-background;
+  --@{ant-prefix}-menu-dark-bg: @popover-background;
+  --@{ant-prefix}-menu-popup-bg: @popover-background;
+
+  // Message
+  --@{ant-prefix}-message-notice-content-bg: @popover-background;
+
+  // Notification
+  --@{ant-prefix}-notification-bg: @popover-background;
+
+  // LINK
+  --@{ant-prefix}-link-hover-color: ~'var(--@{ant-prefix}-primary-5)';
+  --@{ant-prefix}-link-active-color: ~'var(--@{ant-prefix}-primary-7)';
+
+  // Table
+  --@{ant-prefix}-table-header-bg: #1d1d1d;
+  --@{ant-prefix}-table-body-sort-bg: fade(@white, 1%);
+  --@{ant-prefix}-table-row-hover-bg: #262626;
+  --@{ant-prefix}-table-header-cell-split-color: fade(@white, 8%);
+  --@{ant-prefix}-table-header-sort-bg: #262626;
+  --@{ant-prefix}-table-header-filter-active-bg: #434343;
+  --@{ant-prefix}-table-header-sort-active-bg: #303030;
+  --@{ant-prefix}-table-fixed-header-sort-active-bg: #222;
+  --@{ant-prefix}-table-filter-btns-bg: @popover-background;
+  --@{ant-prefix}-table-expanded-row-bg: ~'var(--@{ant-prefix}-table-header-bg)';
+  --@{ant-prefix}-table-filter-dropdown-bg: @popover-background;
+  --@{ant-prefix}-table-expand-icon-bg: transparent;
+
+  // Tag
+
+  // TimePicker
+  --@{ant-prefix}-picker-bg: transparent;
+  --@{ant-prefix}-picker-basic-cell-hover-with-range-color: darken(@base-primary, 35%);
+  --@{ant-prefix}-picker-basic-cell-disabled-bg: #303030;
+  --@{ant-prefix}-picker-date-hover-range-border-color: darken(@base-primary, 20%);
+
+  // Dropdown
+  --@{ant-prefix}-dropdown-menu-bg: @popover-background;
+  --@{ant-prefix}-dropdown-menu-submenu-disabled-bg: transparent;
+
+  // Steps
+  --@{ant-prefix}-steps-nav-arrow-color: fade(@white, 20%);
+  --@{ant-prefix}-steps-background: transparent;
+
+  // Avatar
+  --@{ant-prefix}-avatar-bg: fade(@white, 30%);
+
+  // Progress
+  --@{ant-prefix}-progress-steps-item-bg: fade(@white, 8%);
+
+  // Calendar
+  --@{ant-prefix}-calendar-bg: @popover-background;
+  --@{ant-prefix}-calendar-input-bg: @popover-background;
+  --@{ant-prefix}-calendar-border-color: transparent;
+  --@{ant-prefix}-calendar-full-bg: @component-background;
+
+  // Badge
+  --@{ant-prefix}-badge-text-color: @white;
+
+  // Popover
+  --@{ant-prefix}-popover-bg: @popover-background;
+
+  // Drawer
+  --@{ant-prefix}-drawer-bg: @popover-background;
+
+  // Card
+  --@{ant-prefix}-card-actions-background: @component-background;
+  --@{ant-prefix}-card-skeleton-bg: #303030;
+  --@{ant-prefix}-card-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.64), 0 3px 6px 0 rgba(0, 0, 0, 0.48),
+  0 5px 12px 4px rgba(0, 0, 0, 0.36);
+
+  // Transfer
+  --@{ant-prefix}-transfer-item-hover-bg: #262626;
+
+  // Comment
+  --@{ant-prefix}-comment-bg: transparent;
+  --@{ant-prefix}-comment-author-time-color: fade(@white, 30%);
+  --@{ant-prefix}-comment-action-hover-color: fade(@white, 65%);
+
+  // Rate
+  --@{ant-prefix}-rate-star-bg: fade(@white, 12%);
+
+  // Switch
+  --@{ant-prefix}-switch-bg: @white;
+
+  // Pagination
+  --@{ant-prefix}-pagination-item-bg: transparent;
+  --@{ant-prefix}-pagination-item-bg-active: transparent;
+  --@{ant-prefix}-pagination-item-link-bg: transparent;
+  --@{ant-prefix}-pagination-item-disabled-bg-active: fade(@white, 25%);
+  --@{ant-prefix}-pagination-item-disabled-color-active: @black;
+  --@{ant-prefix}-pagination-item-input-bg: transparent;
+
+  // PageHeader
+  // ---
+  --@{ant-prefix}-page-header-back-color: @icon-color;
+  --@{ant-prefix}-page-header-ghost-bg: transparent;
+
+  // Slider
+  --@{ant-prefix}-slider-rail-background-color: #262626;
+  --@{ant-prefix}-slider-rail-background-color-hover: @border-color-base;
+  --@{ant-prefix}-slider-dot-border-color: @border-color-split;
+  --@{ant-prefix}-slider-dot-border-color-active: ~'var(--@{ant-prefix}-primary-4)';
+
+  // Skeleton
+  --@{ant-prefix}-skeleton-color: rgba(190, 190, 190, 0.2);
+  --@{ant-prefix}-skeleton-to-color: fade(@white, 16%);
+
+  // Alert
+  --@{ant-prefix}-alert-success-border-color: @green-3;
+  --@{ant-prefix}-alert-success-bg-color: @green-1;
+  --@{ant-prefix}-alert-success-icon-color: @success-color;
+  --@{ant-prefix}-alert-info-border-color: ~'var(--@{ant-prefix}-primary-3)';
+  --@{ant-prefix}-alert-info-bg-color: ~'var(--@{ant-prefix}-primary-1)';
+  --@{ant-prefix}-alert-info-icon-color: @info-color;
+  --@{ant-prefix}-alert-warning-border-color: @gold-3;
+  --@{ant-prefix}-alert-warning-bg-color: @gold-1;
+  --@{ant-prefix}-alert-warning-icon-color: @warning-color;
+  --@{ant-prefix}-alert-error-border-color: @red-3;
+  --@{ant-prefix}-alert-error-bg-color: @red-1;
+  --@{ant-prefix}-alert-error-icon-color: @error-color;
+
+  // Timeline
+  --@{ant-prefix}-timeline-color: @border-color-split;
+  --@{ant-prefix}-timeline-dot-color: @primary-color;
+  // Mentions
+  --@{ant-prefix}-mentions-dropdown-bg: @popover-background;
+
+  // Segmented
+  --@{ant-prefix}-segmented-bg: fade(@black, 25%);
+  --@{ant-prefix}-segmented-hover-bg: fade(@black, 45%);
+  --@{ant-prefix}-segmented-selected-bg: #333333;
+  --@{ant-prefix}-segmented-label-color: fade(@white, 65%);
+  --@{ant-prefix}-segmented-label-hover-color: fade(@white, 85%);
+}
+  
+
+

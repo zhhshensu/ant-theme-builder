@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run copy && umi dev",
+    "build": "npm run copy && umi build",
+    "copy": "bash ./copy-theme.sh",
+    "postinstall": "umi setup",
+    "setup": "umi setup",
+    "start": "npm run dev"
+  },
+  "dependencies": {
+    "@ant-design/compatible": "5.1.2",
+    "@ant-design/icons": "^5.5.2",
+    "@ant-design/pro-layout": "^7.21.2",
+    "antd": "4",
+    "devextreme": "21.2.7",
+    "devextreme-react": "21.2.7",
+    "react-copy-to-clipboard": "^5.1.0",
+    "remark-gfm": "^4.0.0",
+    "umi": "^4.0.86"
+  },
+  "devDependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@types/react": "^18.0.33",
+    "@types/react-copy-to-clipboard": "^5.0.7",
+    "@types/react-dom": "^18.0.11",
+    "typescript": "^5.0.3"
+  }
+}

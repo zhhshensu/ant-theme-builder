@@ -1,0 +1,34 @@
+.component-preview {
+  .title {
+    margin-bottom: 10px;
+  }
+  margin-bottom: 20px;
+  .component-preview-code-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .code-icon {
+      padding: 0 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.code-copy-icon {
+        width: 18px;
+      }
+      &.code-expand-icon {
+        img {
+          display: inline-block;
+          width: 16px;
+        }
+      }
+    }
+  }
+}
+
+.component-preview-code-content-expand {
+  display: block;
+}
+.component-preview-code-content-collapse {
+  display: none;
+}
