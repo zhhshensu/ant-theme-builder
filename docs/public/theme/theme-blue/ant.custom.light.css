@@ -1238,9 +1238,6 @@ html {
   transition: height 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
 }
 /* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
-/* stylelint-disable no-duplicate-selectors */
-/* stylelint-disable */
-/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
 .ant-affix {
   position: fixed;
   z-index: 10;
@@ -3706,6 +3703,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-primary:focus {
   color: #754fff;
   border-color: #754fff;
+  background: transparent;
 }
 .ant-btn-background-ghost.ant-btn-primary:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-primary:focus > a:only-child {
@@ -3724,6 +3722,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-primary:active {
   color: #3014cc;
   border-color: #3014cc;
+  background: transparent;
 }
 .ant-btn-background-ghost.ant-btn-primary:active > a:only-child {
   color: currentcolor;
@@ -3786,6 +3785,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-danger:focus {
   color: #ff7875;
   border-color: #ff7875;
+  background: transparent;
 }
 .ant-btn-background-ghost.ant-btn-danger:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-danger:focus > a:only-child {
@@ -3804,6 +3804,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-danger:active {
   color: #d9363e;
   border-color: #d9363e;
+  background: transparent;
 }
 .ant-btn-background-ghost.ant-btn-danger:active > a:only-child {
   color: currentcolor;
@@ -3866,6 +3867,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-dangerous:focus {
   color: #ff7875;
   border-color: #ff7875;
+  background: transparent;
 }
 .ant-btn-background-ghost.ant-btn-dangerous:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-dangerous:focus > a:only-child {
@@ -3884,6 +3886,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-dangerous:active {
   color: #d9363e;
   border-color: #d9363e;
+  background: transparent;
 }
 .ant-btn-background-ghost.ant-btn-dangerous:active > a:only-child {
   color: currentcolor;
@@ -3944,8 +3947,9 @@ a.ant-btn-icon-only > .anticon {
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus {
-  color: #ff7875;
+  color: #d9363e;
   border-color: transparent;
+  background: transparent;
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:hover > a:only-child,
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:focus > a:only-child {
@@ -3964,6 +3968,7 @@ a.ant-btn-icon-only > .anticon {
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active {
   color: #d9363e;
   border-color: transparent;
+  background: transparent;
 }
 .ant-btn-background-ghost.ant-btn-dangerous.ant-btn-link:active > a:only-child {
   color: currentcolor;
@@ -26544,6 +26549,367 @@ div.ant-typography-edit-content.ant-typography-rtl {
 .ant-upload-list-rtl.ant-upload-list-picture-card .ant-upload-list-item-file + .ant-upload-list-item-name {
   margin: 8px 0 0;
   padding: 0;
+}
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+:root {
+  --ant-primary-color: #4a24f2;
+  --ant-primary-color-hover: #754fff;
+  --ant-primary-color-active: #3014cc;
+  --ant-primary-color-outline: rgba(74, 36, 242, 0.2);
+  --ant-primary-color-deprecated-pure: ;
+  --ant-primary-color-deprecated-l-35: #d5ccfc;
+  --ant-primary-color-deprecated-l-20: #9a84f8;
+  --ant-primary-color-deprecated-t-20: #6e50f5;
+  --ant-primary-color-deprecated-t-50: #a592f9;
+  --ant-primary-color-deprecated-f-12: rgba(74, 36, 242, 0.12);
+  --ant-primary-color-active-deprecated-f-30: rgba(245, 240, 255, 0.3);
+  --ant-primary-color-active-deprecated-d-02: #eee6ff;
+  --ant-success-color: #52c41a;
+  --ant-success-color-hover: #73d13d;
+  --ant-success-color-active: #389e0d;
+  --ant-success-color-outline: rgba(82, 196, 26, 0.2);
+  --ant-success-color-deprecated-bg: #f6ffed;
+  --ant-success-color-deprecated-border: #b7eb8f;
+  --ant-error-color: #ff4d4f;
+  --ant-error-color-hover: #ff7875;
+  --ant-error-color-active: #d9363e;
+  --ant-error-color-outline: rgba(255, 77, 79, 0.2);
+  --ant-error-color-deprecated-bg: #fff2f0;
+  --ant-error-color-deprecated-border: #ffccc7;
+  --ant-warning-color: #faad14;
+  --ant-warning-color-hover: #ffc53d;
+  --ant-warning-color-active: #d48806;
+  --ant-warning-color-outline: rgba(250, 173, 20, 0.2);
+  --ant-warning-color-deprecated-bg: #fffbe6;
+  --ant-warning-color-deprecated-border: #ffe58f;
+  --ant-info-color: #4a24f2;
+  --ant-info-color-deprecated-bg: #f5f0ff;
+  --ant-info-color-deprecated-border: #bba1ff;
+  --ant-primary-1: #f5f0ff;
+  --ant-primary-2: #dac9ff;
+  --ant-primary-3: #bba1ff;
+  --ant-primary-4: #9a78ff;
+  --ant-primary-5: #754fff;
+  --ant-primary-6: #4a24f2;
+  --ant-primary-7: #3014cc;
+  --ant-primary-8: #1b08a6;
+  --ant-primary-9: #0b0080;
+  --ant-primary-10: #040059;
+  --ant-highlight-color: #ff4d4f;
+  --ant-popover-background: #fff;
+  --ant-popover-customize-border-color: rgba(0, 0, 0, 0.06);
+  --ant-body-background: #fff;
+  --ant-component-backgroud: #fff;
+  --ant-text-color: rgba(0, 0, 0, 0.85);
+  --ant-text-color-secondary: rgba(0, 0, 0, 0.45);
+  --ant-text-color-inverse: #fff;
+  --ant-icon-color: inherit;
+  --ant-icon-color-hover: rgba(0, 0, 0, 0.75);
+  --ant-heading-color: rgba(0, 0, 0, 0.85);
+  --ant-item-hover-bg: #f5f5f5;
+  --ant-border-color-base: #d9d9d9;
+  --ant-border-color-split: rgba(0, 0, 0, 0.06);
+  --ant-background-color-light: #fafafa;
+  --ant-background-color-base: #f5f5f5;
+  --ant-disabled-color: rgba(0, 0, 0, 0.25);
+  --ant-disabled-bg: var(--ant-primary-color-hover);
+  --ant-disabled-active-bg: #e6e6e6;
+  --ant-disabled-color-dark: rgba(255, 255, 255, 0.35);
+  --ant-tree-bg: #fff;
+  --ant-list-customize-card-bg: #fff;
+  --ant-shadow-color: rgba(0, 0, 0, 0.15);
+  --ant-shadow-color-inverse: #fff;
+  --ant-shadow-1-up: 0 -6px 16px -8px rgba(0, 0, 0, 0.08), 0 -9px 28px 0 rgba(0, 0, 0, 0.05), 0 -12px 48px 16px rgba(0, 0, 0, 0.03);
+  --ant-shadow-1-down: 0 6px 16px -8px rgba(0, 0, 0, 0.08), 0 9px 28px 0 rgba(0, 0, 0, 0.05), 0 12px 48px 16px rgba(0, 0, 0, 0.03);
+  --ant-shadow-1-right: 6px 0 16px -8px rgba(0, 0, 0, 0.08), 9px 0 28px 0 rgba(0, 0, 0, 0.05), 12px 0 48px 16px rgba(0, 0, 0, 0.03);
+  --ant-shadow-2: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  --ant-btn-default-bg: #fff;
+  --ant-btn-default-ghost-color: #fff;
+  --ant-btn-default-ghost-border: #fff;
+  --ant-btn-text-hover-bg: rgba(0, 0, 0, 0.018);
+  --ant-checkbox-check-bg: #fff;
+  --ant-descriptions-bg: #fafafa;
+  --ant-divider-color: rgba(0, 0, 0, 0.06);
+  --ant-modal-header-bg: #fff;
+  --ant-modal-content-bg: #fff;
+  --ant-radio-solid-checked-color: #fff;
+  --ant-radio-dot-disabled-color: rgba(0, 0, 0, 0.2);
+  --ant-radio-disabled-button-checked-bg: var(--ant-disabled-active-bg);
+  --ant-layout-body-background: #f0f2f5;
+  --ant-layout-header-background: #001529;
+  --ant-layout-trigger-background: #002140;
+  --ant-input-bg: #fff;
+  --ant-input-placeholder-color: #bfbfbf;
+  --ant-input-icon-color: var(--ant-text-color);
+  --ant-input-number-handler-active-bg: #f4f4f4;
+  --ant-input-icon-hover-color: rgba(0, 0, 0, 0.85);
+  --ant-select-dropdown-bg: #fff;
+  --ant-select-background: #fff;
+  --ant-select-clear-background: var(--ant-select-background);
+  --ant-select-selection-item-bg: var(--ant-background-color-base);
+  --ant-select-selection-item-border-color: var(--ant-border-color-split);
+  --ant-select-multiple-disabled-background: var(--ant-disabled-bg);
+  --ant-select-multiple-item-disabled-color: #bfbfbf;
+  --ant-select-multiple-item-disabled-border-color: var(--ant-border-color-base);
+  --ant-cascader-bg: #fff;
+  --ant-cascader-menu-bg: #fff;
+  --ant-tooltip-bg: rgba(0, 0, 0, 0.75);
+  --ant-menu-popup-bg: #fff;
+  --ant-menu-dark-bg: var(--ant-layout-header-background);
+  --ant-menu-dark-inline-submenu-bg: #000c17;
+  --ant-message-notice-content-bg: #fff;
+  --ant-notification-bg: #fff;
+  --ant-link-hover-color: var(--ant-primary-color-hover);
+  --ant-link-active-color: var(--ant-primary-color-active);
+  --ant-table-header-bg: var(--ant-background-color-light);
+  --ant-table-body-sort-bg: #fafafa;
+  --ant-table-row-hover-bg: var(--ant-background-color-light);
+  --ant-table-header-cell-split-color: rgba(0, 0, 0, 0.06);
+  --ant-table-header-sort-bg: var(--ant-background-color-base);
+  --ant-table-header-filter-active-bg: rgba(0, 0, 0, 0.04);
+  --ant-table-header-sort-active-bg: rgba(0, 0, 0, 0.04);
+  --ant-table-fixed-header-sort-active-bg: #f5f5f5;
+  --ant-table-filter-btns-bg: inherit;
+  --ant-table-expanded-row-bg: var(--ant-table-header-bg);
+  --ant-table-filter-dropdown-bg: #fff;
+  --ant-table-expand-icon-bg: #fff;
+  --ant-picker-bg: #fff;
+  --ant-picker-basic-cell-hover-with-range-color: : ~'var(--ant-primary-color-deprecated-l-35)';
+  --ant-picker-basic-cell-disabled-bg: rgba(0, 0, 0, 0.04);
+  --ant-picker-date-hover-range-border-color: var(--ant-primary-color-deprecated-l-20);
+  --ant-dropdown-menu-bg: #fff;
+  --ant-dropdown-menu-submenu-disabled-bg: #fff;
+  --ant-steps-nav-arrow-color: rgba(0, 0, 0, 0.25);
+  --ant-steps-background: #fff;
+  --ant-avatar-bg: #ccc;
+  --ant-progress-steps-item-bg: #f3f3f3;
+  --ant-calendar-bg: #fff;
+  --ant-calendar-input-bg: #fff;
+  --ant-calendar-border-color: #fff;
+  --ant-calendar-full-bg: #fff;
+  --ant-badge-text-color: #fff;
+  --ant-popover-bg: #fff;
+  --ant-drawer-bg: #fff;
+  --ant-card-actions-background: #fff;
+  --ant-card-skeleton-bg: #cfd8dc;
+  --ant-card-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 5px 12px 4px rgba(0, 0, 0, 0.09);
+  --ant-transfer-item-hover-bg: #f5f5f5;
+  --ant-comment-bg: inherit;
+  --ant-comment-author-time-color: #ccc;
+  --ant-comment-action-hover-color: #595959;
+  --ant-rate-star-bg: rgba(0, 0, 0, 0.06);
+  --ant-switch-bg: #fff;
+  --ant-pagination-item-bg: #fff;
+  --ant-pagination-item-bg-active: #fff;
+  --ant-pagination-item-link-bg: #fff;
+  --ant-pagination-item-disabled-color-active: rgba(0, 0, 0, 0.25);
+  --ant-pagination-item-disabled-bg-active: #e6e6e6;
+  --ant-pagination-item-input-bg: #fff;
+  --ant-page-header-back-color: #000;
+  --ant-page-header-ghost-bg: inherit;
+  --ant-slider-rail-background-color: #f5f5f5;
+  --ant-slider-rail-background-color-hover: #e1e1e1;
+  --ant-slider-dot-border-color: rgba(0, 0, 0, 0.06);
+  --ant-slider-dot-border-color-active: var(--ant-primary-color-deprecated-t-50);
+  --ant-skeleton-color: rgba(190, 190, 190, 0.2);
+  --ant-skeleton-to-color: rgba(129, 129, 129, 0.24);
+  --ant-alert-success-border-color: var(--ant-success-color-deprecated-border);
+  --ant-alert-success-bg-color: var(--ant-success-color-deprecated-bg);
+  --ant-alert-success-icon-color: #52c41a;
+  --ant-alert-info-border-color: var(--ant-info-color-deprecated-border);
+  --ant-alert-info-bg-color: var(--ant-info-color-deprecated-bg);
+  --ant-alert-info-icon-color: #4a24f2;
+  --ant-alert-warning-border-color: var(--ant-warning-color-deprecated-border);
+  --ant-alert-warning-bg-color: var(--ant-warning-color-deprecated-bg);
+  --ant-alert-warning-icon-color: #faad14;
+  --ant-alert-error-border-color: var(--ant-error-color-deprecated-border);
+  --ant-alert-error-bg-color: var(--ant-error-color-deprecated-bg);
+  --ant-alert-error-icon-color: #ff4d4f;
+  --ant-timeline-color: rgba(0, 0, 0, 0.06);
+  --ant-timeline-dot-color: #4a24f2;
+  --ant-mentions-dropdown-bg: #fff;
+  --ant-segmented-bg: rgba(0, 0, 0, 0.04);
+  --ant-segmented-hover-bg: rgba(0, 0, 0, 0.06);
+  --ant-segmented-selected-bg: #fff;
+  --ant-segmented-label-color: rgba(0, 0, 0, 0.65);
+  --ant-segmented-label-hover-color: #262626;
+}
+.dark {
+  --ant-black: #fff;
+  --ant-white: #000;
+  --ant-primary-color: #4222d1;
+  --ant-primary-color-hover: #6847de;
+  --ant-primary-color-active: #2a13ab;
+  --ant-primary-color-outline: rgba(66, 34, 209, 0.2);
+  --ant-info-color: #4222d1;
+  --ant-info-color-deprecated-bg: #f5f0ff;
+  --ant-info-color-deprecated-border: #b89ef7;
+  --ant-success-color: #49aa19;
+  --ant-success-color-hover: #67b839;
+  --ant-success-color-active: #31850d;
+  --ant-success-color-outline: rgba(73, 170, 25, 0.2);
+  --ant-success-color-deprecated-bg: #e4ebdd;
+  --ant-success-color-deprecated-border: #a5d184;
+  --ant-error-color: #a61d24;
+  --ant-error-color-hover: #b33b3d;
+  --ant-error-color-active: #800f19;
+  --ant-error-color-outline: rgba(166, 29, 36, 0.2);
+  --ant-error-color-deprecated-bg: #e6d9d8;
+  --ant-error-color-deprecated-border: #cc8885;
+  --ant-warning-color: #d89614;
+  --ant-warning-color-hover: #e6b239;
+  --ant-warning-color-active: #b37407;
+  --ant-warning-color-outline: rgba(216, 150, 20, 0.2);
+  --ant-warning-color-deprecated-bg: #fffbe6;
+  --ant-warning-color-deprecated-border: #ffe591;
+  --ant-primary-1: #141225;
+  --ant-primary-2: #1a143a;
+  --ant-primary-3: #22184d;
+  --ant-primary-4: #291a69;
+  --ant-primary-5: #321d8f;
+  --ant-primary-6: #4222d1;
+  --ant-primary-7: #6042ca;
+  --ant-primary-8: #896ce0;
+  --ant-primary-9: #b39af0;
+  --ant-primary-10: #d8c8fa;
+  --ant-popover-background: #1f1f1f;
+  --ant-popover-customize-border-color: #3a3a3a;
+  --ant-body-background: #000;
+  --ant-component-backgroud: #000;
+  --ant-text-color: rgba(255, 255, 255, 0.85);
+  --ant-text-color-secondary: rgba(255, 255, 255, 0.45);
+  --ant-text-color-inverse: #fff;
+  --ant-icon-color-hover: rgba(255, 255, 255, 0.75);
+  --ant-heading-color: rgba(255, 255, 255, 0.85);
+  --ant-item-hover-bg: rgba(255, 255, 255, 0.08);
+  --ant-border-color-base: #434343;
+  --ant-border-color-split: #303030;
+  --ant-background-color-light: rgba(255, 255, 255, 0.04);
+  --ant-background-color-base: rgba(255, 255, 255, 0.08);
+  --ant-disabled-color: rgba(255, 255, 255, 0.3);
+  --ant-disabled-bg: var(--ant-primary-color-hover);
+  --ant-disabled-color-dark: rgba(255, 255, 255, 0.3);
+  --ant-tree-bg: transparent;
+  --ant-list-customize-card-bg: transparent;
+  --ant-shadow-color: rgba(0, 0, 0, 0.45);
+  --ant-shadow-color-inverse: #141414;
+  --ant-shadow-1-up: 0 -6px 16px -8px rgba(0, 0, 0, 0.32), 0 -9px 28px 0 rgba(0, 0, 0, 0.2), 0 -12px 48px 16px rgba(0, 0, 0, 0.12);
+  --ant-shadow-1-down: 0 6px 16px -8px rgba(0, 0, 0, 0.32), 0 9px 28px 0 rgba(0, 0, 0, 0.2), 0 12px 48px 16px rgba(0, 0, 0, 0.12);
+  --ant-shadow-1-right: 6px 0 16px -8px rgba(0, 0, 0, 0.32), 9px 0 28px 0 rgba(0, 0, 0, 0.2), 12px 0 48px 16px rgba(0, 0, 0, 0.12);
+  --ant-shadow-2: 0 3px 6px -4px rgba(0, 0, 0, 0.48), 0 6px 16px 0 rgba(0, 0, 0, 0.32), 0 9px 28px 8px rgba(0, 0, 0, 0.2);
+  --ant-btn-default-bg: transparent;
+  --ant-btn-default-ghost-color: var(--ant-text-color);
+  --ant-btn-default-ghost-border: rgba(255, 255, 255, 0.25);
+  --ant-btn-text-hover-bg: rgba(255, 255, 255, 0.03);
+  --ant-checkbox-check-bg: transparent;
+  --ant-descriptions-bg: var(--ant-background-color-light);
+  --ant-divider-color: rgba(255, 255, 255, 0.12);
+  --ant-modal-header-bg: #1f1f1f;
+  --ant-modal-content-bg: #1f1f1f;
+  --ant-radio-dot-disabled-color: rgba(255, 255, 255, 0.2);
+  --ant-radio-solid-checked-color: #fff;
+  --ant-radio-disabled-button-checked-bg: rgba(255, 255, 255, 0.2);
+  --ant-layout-body-background: #000;
+  --ant-layout-header-background: #1f1f1f;
+  --ant-layout-trigger-background: #262626;
+  --ant-input-bg: transparent;
+  --ant-input-placeholder-color: rgba(255, 255, 255, 0.3);
+  --ant-input-icon-color: rgba(255, 255, 255, 0.3);
+  --ant-input-number-handler-active-bg: var(--ant-item-hover-bg);
+  --ant-input-icon-hover-color: rgba(255, 255, 255, 0.85);
+  --ant-select-background: transparent;
+  --ant-select-dropdown-bg: #1f1f1f;
+  --ant-select-clear-background: #141414;
+  --ant-select-selection-item-bg: rgba(255, 255, 255, 0.08);
+  --ant-select-selection-item-border-color: #303030;
+  --ant-select-multiple-disabled-background: #141414;
+  --ant-select-multiple-item-disabled-color: #595959;
+  --ant-select-multiple-item-disabled-border-color: #1f1f1f;
+  --ant-cascader-bg: transparent;
+  --ant-cascader-menu-bg: #1f1f1f;
+  --ant-tooltip-bg: #434343;
+  --ant-menu-dark-inline-submenu-bg: #141414;
+  --ant-menu-dark-bg: #1f1f1f;
+  --ant-menu-popup-bg: #1f1f1f;
+  --ant-message-notice-content-bg: #1f1f1f;
+  --ant-notification-bg: #1f1f1f;
+  --ant-link-hover-color: var(--ant-primary-5);
+  --ant-link-active-color: var(--ant-primary-7);
+  --ant-table-header-bg: #1d1d1d;
+  --ant-table-body-sort-bg: rgba(255, 255, 255, 0.01);
+  --ant-table-row-hover-bg: #262626;
+  --ant-table-header-cell-split-color: rgba(255, 255, 255, 0.08);
+  --ant-table-header-sort-bg: #262626;
+  --ant-table-header-filter-active-bg: #434343;
+  --ant-table-header-sort-active-bg: #303030;
+  --ant-table-fixed-header-sort-active-bg: #222;
+  --ant-table-filter-btns-bg: #1f1f1f;
+  --ant-table-expanded-row-bg: var(--ant-table-header-bg);
+  --ant-table-filter-dropdown-bg: #1f1f1f;
+  --ant-table-expand-icon-bg: transparent;
+  --ant-picker-bg: transparent;
+  --ant-picker-basic-cell-hover-with-range-color: #110937;
+  --ant-picker-basic-cell-disabled-bg: #303030;
+  --ant-picker-date-hover-range-border-color: #261379;
+  --ant-dropdown-menu-bg: #1f1f1f;
+  --ant-dropdown-menu-submenu-disabled-bg: transparent;
+  --ant-steps-nav-arrow-color: rgba(255, 255, 255, 0.2);
+  --ant-steps-background: transparent;
+  --ant-avatar-bg: rgba(255, 255, 255, 0.3);
+  --ant-progress-steps-item-bg: rgba(255, 255, 255, 0.08);
+  --ant-calendar-bg: #1f1f1f;
+  --ant-calendar-input-bg: #1f1f1f;
+  --ant-calendar-border-color: transparent;
+  --ant-calendar-full-bg: #141414;
+  --ant-badge-text-color: #fff;
+  --ant-popover-bg: #1f1f1f;
+  --ant-drawer-bg: #1f1f1f;
+  --ant-card-actions-background: #141414;
+  --ant-card-skeleton-bg: #303030;
+  --ant-card-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.64), 0 3px 6px 0 rgba(0, 0, 0, 0.48), 0 5px 12px 4px rgba(0, 0, 0, 0.36);
+  --ant-transfer-item-hover-bg: #262626;
+  --ant-comment-bg: transparent;
+  --ant-comment-author-time-color: rgba(255, 255, 255, 0.3);
+  --ant-comment-action-hover-color: rgba(255, 255, 255, 0.65);
+  --ant-rate-star-bg: rgba(255, 255, 255, 0.12);
+  --ant-switch-bg: #fff;
+  --ant-pagination-item-bg: transparent;
+  --ant-pagination-item-bg-active: transparent;
+  --ant-pagination-item-link-bg: transparent;
+  --ant-pagination-item-disabled-bg-active: rgba(255, 255, 255, 0.25);
+  --ant-pagination-item-disabled-color-active: #000;
+  --ant-pagination-item-input-bg: transparent;
+  --ant-page-header-back-color: inherit;
+  --ant-page-header-ghost-bg: transparent;
+  --ant-slider-rail-background-color: #262626;
+  --ant-slider-rail-background-color-hover: #434343;
+  --ant-slider-dot-border-color: #303030;
+  --ant-slider-dot-border-color-active: var(--ant-primary-4);
+  --ant-skeleton-color: rgba(190, 190, 190, 0.2);
+  --ant-skeleton-to-color: rgba(255, 255, 255, 0.16);
+  --ant-alert-success-border-color: #274916;
+  --ant-alert-success-bg-color: #162312;
+  --ant-alert-success-icon-color: #49aa19;
+  --ant-alert-info-border-color: var(--ant-primary-3);
+  --ant-alert-info-bg-color: var(--ant-primary-1);
+  --ant-alert-info-icon-color: #4222d1;
+  --ant-alert-warning-border-color: #594214;
+  --ant-alert-warning-bg-color: #2b2111;
+  --ant-alert-warning-icon-color: #d89614;
+  --ant-alert-error-border-color: #58181c;
+  --ant-alert-error-bg-color: #2a1215;
+  --ant-alert-error-icon-color: #a61d24;
+  --ant-timeline-color: #303030;
+  --ant-timeline-dot-color: #4222d1;
+  --ant-mentions-dropdown-bg: #1f1f1f;
+  --ant-segmented-bg: rgba(0, 0, 0, 0.25);
+  --ant-segmented-hover-bg: rgba(0, 0, 0, 0.45);
+  --ant-segmented-selected-bg: #333333;
+  --ant-segmented-label-color: rgba(255, 255, 255, 0.65);
+  --ant-segmented-label-hover-color: rgba(255, 255, 255, 0.85);
 }
 .ant-table-tbody > tr.ant-table-row:hover > td,
 .ant-table-tbody > tr > td.ant-table-cell-row-hover {

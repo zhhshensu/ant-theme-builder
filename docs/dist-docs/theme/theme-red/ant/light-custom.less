@@ -1,0 +1,507 @@
+
+@primary-color: @blue-base;
+
+@primary-color-10-opacity: fade(@primary-color, 10%); // 10% 透明度
+@primary-color-40-opacity: fade(@primary-color, 40%); // 40% 透明度
+@primary-color-80-opacity: fade(@primary-color, 80%); // 80% 透明度
+@primary-color-90-opacity: fade(@primary-color, 90%); // 90% 透明度
+
+// 遗留代码，之前开发自定义的代码
+.ant-table-tbody > tr.ant-table-row:hover > td,
+.ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  color: @primary-color;
+}
+.ant-table-tbody > tr.ant-table-row-selected > td {
+  background-color: @primary-color-10-opacity;
+  color: @primary-color;
+}
+.ant-checkbox-inner {
+  background-color: #fff;
+}
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border: 2px solid @primary-color;
+  border-top-width: 0px;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-left-width: 0px;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  content: ' ';
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #fff;
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: @primary-color-10-opacity;
+  color: @primary-color;
+}
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: @primary-color-10-opacity;
+  color: @primary-color;
+}
+.ant-form-item-explain-error {
+  color: @primary-color;
+}
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
+  border-color: @primary-color;
+}
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+  border-color: @primary-color;
+}
+.ant-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: #fff;
+}
+.ant-pro-global-header-layout-mix {
+  background-color: @primary-color;
+}
+/* // 划过的字体颜色 */
+.ant-pro-sider.ant-layout-sider-light .ant-menu-item-selected a,
+.ant-pro-sider.ant-layout-sider-light .ant-menu-item a:hover {
+  color: @primary-color;
+}
+/* // 划过的背景颜色 */
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: @primary-color-10-opacity;
+}
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item-active,
+.ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-light .ant-menu-submenu-active,
+.ant-menu-light .ant-menu-submenu-title:hover {
+  background-color: @primary-color-10-opacity;
+}
+.ant-menu-light .ant-menu-submenu-active {
+  background: none;
+}
+/* 主体内容的 左右边距 */
+.ant-tabs-content-holder {
+  margin: 5px 16px;
+}
+// 2024.12.23 保证已有项目正常运行
+.ant-tabs-content {
+  // position: relative;
+  width: 100%;
+  display: flex;
+}
+.ant-tabs-tabpane {
+  flex: none;
+  width: 100%;
+  outline: none;
+}
+.ant-drawer.ant-drawer-open .ant-drawer-mask {
+  height: 100%;
+  opacity: 1;
+  transition: none;
+  animation: antdDrawerFadeIn 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: auto;
+}
+.ant-drawer.ant-drawer-open .ant-drawer-mask {
+  height: 100%;
+  opacity: 1;
+  transition: none;
+  animation: antdDrawerFadeIn 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: auto;
+}
+.ant-drawer.ant-drawer-open .ant-drawer-mask {
+  height: 100%;
+  opacity: 1;
+  transition: none;
+  animation: antdDrawerFadeIn 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: auto;
+}
+.ant-layout,
+.ant-layout * {
+  box-sizing: border-box;
+}
+/* 遮罩层从颜色 百分比 */
+.ant-drawer-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.ant-pro-sider-light .ant-pro-sider-logo h1 {
+  color: @primary-color;
+}
+/* 添加antd全局的 */
+/* 左侧导航栏的背景颜色 */
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  background-color: rgba(244, 242, 239, 0.5);
+}
+.ant-menu-sub.ant-menu-inline {
+  background-color: rgba(244, 242, 239, 0.5);
+}
+/* 左侧导航栏的图标与图标之间的间距 */
+.ant-menu-item .ant-menu-item-icon,
+.ant-menu-submenu-title .ant-menu-item-icon,
+.ant-menu-item .anticon,
+.ant-menu-submenu-title .anticon {
+  margin: 0px 8px 0px 8px;
+}
+/* 左侧导航栏的一级的首页收缩行高 */
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  height: 36px;
+  line-height: 36px;
+}
+/* 左侧导航栏的一级的收起图标的收缩行高 */
+.ant-menu-vertical > .ant-menu-item,
+.ant-menu-vertical-left > .ant-menu-item,
+.ant-menu-vertical-right > .ant-menu-item,
+.ant-menu-inline > .ant-menu-item,
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 36px;
+  line-height: 36px;
+}
+/* 左侧导航栏的一级的行高
+.ant-menu-vertical .ant-menu-submenu, 
+.ant-menu-vertical-left .ant-menu-submenu, 
+.ant-menu-vertical-right .ant-menu-submenu, 
+.ant-menu-inline .ant-menu-submenu{
+  height: 36px;
+  line-height: 36px;
+} */
+/* 左侧导航栏的一级内容的行高 及一级的字体大小和颜色*/
+.ant-menu-inline.ant-menu-root .ant-menu-item,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+  height: 36px;
+}
+.ant-menu-inline.ant-menu-root .ant-menu-item > .ant-menu-title-content,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title > .ant-menu-title-content {
+  height: 36px;
+}
+.ant-menu {
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+/* 左侧导航栏的二级的行高 及二级的字体大小和颜色*/
+.ant-menu-sub.ant-menu-inline > .ant-menu-item,
+.ant-menu-sub.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 36px;
+  line-height: 36px;
+}
+.ant-pro-sider.ant-layout-sider-light .ant-menu-item a {
+  color: #666;
+  font-size: 14px;
+}
+/* 面包屑的背景颜色 高 */
+.ant-tabs > .ant-tabs-nav,
+.ant-tabs > div > .ant-tabs-nav > .ant-tabs > .ant-tabs-nav .ant-tabs-nav-wrap,
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-wrap {
+  background-color: rgba(244, 242, 239, 0.5);
+}
+.DrawerStyle .ant-tabs-nav {
+  background-color: #fff;
+}
+/* 面包屑的圆角 */
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab {
+  border-radius: 8px 8px 0 0;
+}
+.ant-tabs-card.ant-tabs-top > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-bottom > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-top > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab,
+.ant-tabs-card.ant-tabs-bottom > div > .ant-tabs-nav .ant-tabs-tab + .ant-tabs-tab {
+  border-radius: 8px 8px 0 0;
+}
+/* 抽屉的主题内容的整体的padding的大小 */
+.ant-drawer-body {
+  padding: 15px 0 0 15px;
+}
+/* 页码 的选中的背景颜色 */
+.dx-pager .dx-pages .dx-page {
+  padding: 0px 7.3px 4px;
+}
+.dx-pager .dx-page-sizes .dx-selection,
+.dx-pager .dx-pages .dx-selection {
+  cursor: inherit;
+  text-shadow: none;
+  color: #fff;
+  border-color: transparent;
+  background-color: @primary-color;
+}
+.ant-menu-item .ant-menu-item-icon + span,
+.ant-menu-submenu-title .ant-menu-item-icon + span,
+.ant-menu-item .anticon + span,
+.ant-menu-submenu-title .anticon + span {
+  color: rgba(0, 0, 0, 0.9);
+  font-weight: 400;
+}
+/* logo */
+.ant-pro-sider-logo {
+  padding: 10px 16px;
+}
+.ant-pro-sider-logo img {
+  height: 20px;
+}
+/* 科目审定表的整体样式 ------------------------- */
+/* 报表项目基础数据 Tabs栏样式 ------- */
+.ProjectTabs.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab {
+  padding: 8px;
+  text-align: center;
+  color: #333333;
+}
+.ProjectTabs.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab:hover {
+  background-color: @primary-color-10-opacity;
+}
+.ProjectTabs.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab-active {
+  background-color: @primary-color-10-opacity;
+}
+.ProjectTabs .ant-tabs-content-holder {
+  margin: 5px 0px;
+}
+/* 项目 Tabs切换right边界线 隐藏 */
+/* .ProjectTabs .ant-tabs-ink-bar{
+  position: absolute;
+  background: #FFF;
+  pointer-events: none;
+} */
+/* 科目审定表项目  Tabs栏样式 ------- */
+.SubjectsTabs.ant-tabs-left > .ant-tabs-nav,
+.ant-tabs-right > .ant-tabs-nav {
+  flex-direction: column;
+  min-width: 30px;
+  background: #fff;
+  border-left: 1px solid #ddd !important;
+}
+.ant-tabs-extra-content {
+  opacity: 0;
+}
+.SubjectsTabs.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab {
+  padding: 8px 3px;
+  text-align: center;
+}
+.ant-tabs-left > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane,
+.ant-tabs-left > div > .ant-tabs-content-holder > .ant-tabs-content > .ant-tabs-tabpane {
+  padding-left: 0px;
+}
+.SubjectsTabs .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn {
+  writing-mode: tb-rl;
+  word-spacing: 10px;
+}
+.SubjectsTabs .ant-tabs-content-holder {
+  margin: 5px 0px;
+}
+/* 科目审定表项目 Tabs切换right边界线 隐藏 */
+/* .SubjectsTabs .ant-tabs-ink-bar{
+  position: absolute;
+  background: @primary-color;
+  pointer-events: none;
+} */
+/* 二次修改样式 */
+.SubjectsTabs.ant-tabs > .ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-list {
+  margin-top: 10px;
+  width: 40px;
+}
+.AccountSubjectsTabs.ant-tabs-left > .ant-tabs-nav,
+.ant-tabs-right > .ant-tabs-nav {
+  flex-direction: column;
+  min-width: 30px;
+  background: #fff;
+}
+.AccountSubjectsTabs.ant-tabs-left > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-left > div > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-right > div > .ant-tabs-nav .ant-tabs-tab {
+  padding: 8px 3px;
+  text-align: center;
+}
+.AccountSubjectsTabs .ant-tabs-nav .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn {
+  writing-mode: tb-rl;
+  word-spacing: 10px;
+}
+.AccountSubjectsTabs .ant-tabs-content-holder {
+  margin: 5px 0px;
+}
+/* 二次修改样式 */
+.AccountSubjectsTabs.ant-tabs > .ant-tabs-nav .ant-tabs-nav-list,
+.ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-list {
+  margin-top: 10px;
+  width: 40px;
+}
+/* 更新 2-6 */
+.ant-select-dropdown {
+  z-index: 1600;
+}
+.AntdSelect.ant-select-single.ant-select-sm:not(.ant-select-customize-input) .ant-select-selector {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.AntdSelect.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background: #fff;
+}
+/* 2-14 跟新 调整 按钮样式 */
+/* default 默认 */
+.ant-btn-default {
+  width: 88px;
+  height: 32px;
+  border-radius: 4px;
+  background: #f4f2ef;
+  color: rgba(0, 0, 0, 0.9);
+}
+/* default 划过 */
+.ant-btn-default:hover,
+.ant-btn-default:focus {
+  background-color: #ebe5df;
+  color: rgba(0, 0, 0, 0.9);
+}
+/* default 禁用 */
+.ant-btn[disabled],
+.ant-btn[disabled]:hover,
+.ant-btn[disabled]:focus,
+.ant-btn[disabled]:active {
+  background-color: #f4f2ef;
+  color: rgba(0, 0, 0, 0.26);
+}
+/* primary 默认 */
+.ant-btn-primary {
+  width: 88px;
+  height: 32px;
+  border-radius: 4px;
+  background: @primary-color;
+  color: rgba(255, 255, 255, 0.9);
+}
+/* primary 划过 */
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: @primary-color-80-opacity;
+  color: rgba(255, 255, 255, 0.9);
+}
+/* primary 禁用 */
+.ant-btn-primary[disabled],
+.ant-btn-primary[disabled]:hover,
+.ant-btn-primary[disabled]:focus,
+.ant-btn-primary[disabled]:active {
+  background-color: @primary-color-40-opacity;
+  color: rgba(255, 255, 255, 0.9);
+}
+/* primary 警告 默认 */
+.ant-btn-dangerous.ant-btn-primary {
+  width: 88px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #e92841;
+  color: rgba(255, 255, 255, 0.9);
+}
+/* primary 警告 划过 */
+.ant-btn-dangerous.ant-btn-primary:hover,
+.ant-btn-dangerous.ant-btn-primary:focus {
+  color: rgba(255, 255, 255, 0.9);
+  border-color: #f55161;
+  background: #ed5367;
+}
+/* primary 警告 禁用 */
+.ant-btn-dangerous.ant-btn-primary[disabled],
+.ant-btn-dangerous.ant-btn-primary[disabled]:hover,
+.ant-btn-dangerous.ant-btn-primary[disabled]:focus,
+.ant-btn-dangerous.ant-btn-primary[disabled]:active {
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(233, 40, 65, 0.2);
+}
+/* primary 描边 默认 */
+.ant-btn.ant-btn-background-ghost {
+  width: 88px;
+  height: 32px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #dcdcdc;
+  color: rgba(0, 0, 0, 0.9);
+}
+/* primary 描边 划过 */
+.ant-btn-background-ghost.ant-btn-primary:hover,
+.ant-btn-background-ghost.ant-btn-primary:focus {
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid @primary-color;
+  color: @primary-color;
+}
+/* primary 描边 禁用 */
+.ant-btn-background-ghost.ant-btn-primary[disabled],
+.ant-btn-background-ghost.ant-btn-primary[disabled]:hover,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:focus,
+.ant-btn-background-ghost.ant-btn-primary[disabled]:active {
+  border-radius: 4px;
+  background: rgba(233, 40, 65, 0.2);
+  color: rgba(0, 0, 0, 0.26);
+}
+.ant-pro-basicLayout {
+  height: 100%;
+}
+/* 5-7 ---------------------- 更新左单 */
+.ant-menu-inline .ant-menu-selected::after,
+.ant-menu-inline .ant-menu-item-selected::after {
+  opacity: 0;
+}
+.ant-menu-root.ant-menu-vertical,
+.ant-menu-root.ant-menu-vertical-left,
+.ant-menu-root.ant-menu-vertical-right,
+.ant-menu-root.ant-menu-inline {
+  padding: 0 8px 0px 8px;
+}
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  border-radius: 4px;
+}
+/* 更新 --------------- 5.8 */
+.ant-pro-sider-light .ant-pro-sider-logo h1 {
+  opacity: 0;
+}
+/* 5-11------------ */
+.ant-dropdown-menu {
+  padding: 4px 4px;
+  border-radius: 4px;
+}
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
+  line-height: 28px;
+}
+/* 修改左侧 导航栏样式 */
+.ant-menu-inline.ant-menu-root .ant-menu-item,
+.ant-menu-inline.ant-menu-root .ant-menu-submenu-title {
+  padding: 0px 0px !important;
+}
+/* .ant-menu-item .ant-menu-item-icon+span, .ant-menu-submenu-title .ant-menu-item-icon+span, .ant-menu-item .anticon+span, .ant-menu-submenu-title .anticon+span{
+  margin-left: 0px;
+} */
+.ant-menu-sub.ant-menu-inline {
+  padding-left: 10px;
+}
+.ant-menu-item .ant-menu-item-icon + span,
+.ant-menu-submenu-title .ant-menu-item-icon + span,
+.ant-menu-item .anticon + span,
+.ant-menu-submenu-title .anticon + span {
+  margin-left: 0px;
+}
+.dx-form-group-caption {
+  font-weight: 600 !important;
+}
+/* .ant-menu-vertical .ant-menu-item, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-right .ant-menu-item, .ant-menu-inline .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-inline .ant-menu-submenu-title{
+  padding: 0px 0px !important;
+}
+.ant-menu-item .ant-menu-item-icon+span, .ant-menu-submenu-title .ant-menu-item-icon+span, .ant-menu-item .anticon+span, .ant-menu-submenu-title .anticon+span{
+  margin-left: 8px;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), margin 0.3s, color 0.3s;
+} */
+/* .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+  padding-left: 59px !important;
+} */
+/* 二次 修改导航栏 */

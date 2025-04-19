@@ -1,0 +1,168 @@
+@primary-color: @blue-base;
+
+
+.ant-dropdown-menu {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+.ant-checkbox-checked .ant-checkbox-inner::after {
+  border: 2px solid @primary-3;
+  border-top-width: 0px;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-left-width: 0px;
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  opacity: 1;
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+  content: ' ';
+}
+.ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #2a2a2a;
+}
+.ant-btn-primary {
+  background: @primary-color;
+  color: #fff;
+}
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background-color: @primary-color;
+  color: #fff;
+}
+a {
+  color: @primary-color;
+}
+.ant-btn:hover,
+.ant-btn:focus {
+  color: #fff;
+}
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: @primary-color;
+}
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+  background-color: @primary-color;
+}
+.ant-form-item-explain-error {
+  color: @primary-color;
+}
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+.ant-input-affix-wrapper-status-error:not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover {
+  border-color: @primary-color;
+}
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+.ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover {
+  border-color: @primary-color;
+}
+.ant-popover-inner {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+.ant-message-notice-content {
+  background-color: #2a2a2a;
+}
+.ant-switch {
+  background-image: linear-gradient(to right, @primary-color, @primary-color), linear-gradient(to right, #141414, #141414);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+}
+.dx-treelist-container {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+.dx-treelist-rowsview .dx-selection.dx-row:not(.dx-row-focused) > td,
+.dx-treelist-rowsview .dx-selection.dx-row:not(.dx-row-focused) > tr > td,
+.dx-treelist-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover > td,
+.dx-treelist-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover > tr > td {
+  background-color: @primary-color;
+  color: #fff;
+}
+.ant-table-tbody > tr.ant-table-row-selected:hover > td {
+  background-color: @primary-3;
+}
+.dx-checkbox-icon {
+  background-color: #2a2a2a;
+}
+.dx-checkbox-checked .dx-checkbox-icon {
+  color: @primary-3;
+}
+.dx-checkbox-indeterminate .dx-checkbox-icon::before {
+  background-color: @primary-color;
+}
+.dx-texteditor-input {
+  background-color: #2a2a2a;
+}
+.dx-texteditor-input {
+  background-color: #2a2a2a;
+}
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected {
+  background-color: @primary-color;
+  color: #fff;
+}
+.dx-dropdowneditor-icon {
+  color: #fff;
+}
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected.dx-state-hover:not(.dx-state-focused) {
+  color: #fff;
+}
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-list-item-selected.dx-state-hover:not(.dx-state-focused) {
+  background-color: @primary-color;
+  color: #fff;
+}
+.dx-list:not(.dx-list-select-decorator-enabled) .dx-list-item.dx-state-hover {
+  background-color: @primary-color;
+  color: #fff;
+}
+.dx-dropdowneditor-button.dx-state-active .dx-dropdowneditor-icon,
+.dx-dropdowneditor.dx-dropdowneditor-active .dx-dropdowneditor-icon {
+  background-color: @primary-color;
+}
+.dx-button-mode-contained {
+  background: @primary-color;
+  color: #fff;
+}
+.dx-dropdowneditor-button.dx-button-mode-contained,
+.dx-dropdowneditor-button.dx-button-mode-outlined,
+.dx-dropdowneditor-button.dx-button-mode-text {
+  background-color: #ccc;
+}
+.dx-dropdowneditor.dx-state-active .dx-dropdowneditor-icon,
+.dx-dropdowneditor.dx-state-hover:not(.dx-custom-button-hovered) .dx-dropdowneditor-icon {
+  background-color: @primary-color;
+}
+.ant-layout-sider-light {
+  background: #1f1f1f;
+}
+.ant-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: #1f1f1f;
+}
+.ant-pro-sider-light .ant-pro-sider-collapsed-button {
+  border-top: gray;
+}
+.ant-pro-global-header-layout-mix {
+  background-color: @primary-color;
+}
+
+// 2024.12.23 保证已有项目正常运行
+.ant-tabs-content {
+  // position: relative;
+  width: 100%;
+  display: flex;
+}
+.ant-tabs-tabpane {
+  flex: none;
+  width: 100%;
+  outline: none;
+}

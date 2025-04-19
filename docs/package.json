@@ -6,7 +6,8 @@
     "copy": "bash ./copy-theme.sh",
     "postinstall": "umi setup",
     "setup": "umi setup",
-    "start": "npm run dev"
+    "start": "npm run dev",
+    "preview": "umi preview"
   },
   "dependencies": {
     "@ant-design/compatible": "5.1.2",
